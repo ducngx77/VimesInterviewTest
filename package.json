@@ -1,0 +1,20 @@
+{
+  "name": "vimestest",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "backend",
+    "frontend",
+    "shared"
+  ],
+  "scripts": {
+    "dev:be": "npm run dev -w backend",
+    "dev:fe": "npm run dev -w frontend",
+    "dev": "concurrently \"npm run dev:be\" \"npm run dev:fe\"",
+    "install-all": "npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^6.0.3"
+  }
+}
